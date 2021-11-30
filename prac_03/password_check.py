@@ -14,7 +14,7 @@ def main():
 
 def print_asterisks(word):
     """Print the parameter string in asterisks."""
-    for char in word:   # print('*' * len(word))
+    for char in word:  # print('*' * len(word))
         print("*", end="")
 
 
