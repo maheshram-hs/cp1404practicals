@@ -1,12 +1,26 @@
-score = float(input("Enter score: "))
+"""
+Get user for their score and print the result.
 
-# Attempt 2
+Broken Score. Created by Maheshram Shunmuganand, November 2021
+"""
 
-if score < 0 or score > 100:
-    print("Invalid score")
-elif score >= 90:
-    print("Excellent")
-elif score >= 50:
-    print("Passable")
-else:
-    print("Bad")
+
+def main():
+    """Get user for their score and print the result."""
+    score = float(input("Enter score: "))
+    print(score_result(score))
+
+
+def score_result(score):
+    if score < 0 or score > 100:
+        return "Invalid score"
+    elif score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
+
+
+if __name__ == "__main__":
+    main()
