@@ -16,6 +16,7 @@ def main():
 
 
 def score_result(score):
+    """Generate result for given score."""
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
