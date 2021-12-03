@@ -1,0 +1,10 @@
+50 is Passable
+53 is Passable
+91 is Excellent
+73 is Passable
+9 is Bad
+69 is Passable
+92 is Excellent
+23 is Bad
+41 is Bad
+81 is Passable
