@@ -12,12 +12,23 @@ def main():
         number = int(input(f"Number {i}: "))
         numbers.append(number)
 
-    # Output
+    # Print output.
     print(f"The first number: {numbers[0]}")
     print(f"The last number: {numbers[-1]}")
     print(f"The smallest number: {min(numbers)}")
     print(f"The largest number: {max(numbers)}")
-    print(f"The average of the numbers is {sum(numbers)/len(numbers)}")
+    print(f"The average of the numbers is {sum(numbers) / len(numbers)}")
+
+    # Check username.
+    usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+                 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
+                 'bob']
+    username = input("Enter username: ")
+
+    if username in usernames:
+        print("Access granted")
+    else:
+        print("Access denied")
 
 
 if __name__ == "__main__":
