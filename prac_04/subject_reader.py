@@ -7,8 +7,10 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Convert data strings into lists and display."""
     data = get_data()
     print(data)
+    subject_details(data)
 
 
 def get_data():
@@ -29,4 +31,11 @@ def get_data():
     return list_of_lists
 
 
-main()
+def subject_details(lists):
+    """Display subject details."""
+    for element in lists:
+        print("{} is thought by {:12} and has {:3} students".format(element[0], element[1], element[2]))
+
+
+if __name__ == "__main__":
+    main()
