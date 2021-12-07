@@ -20,8 +20,7 @@ print(first_initials)
 
 # list comprehension that creates a list containing the initials
 # splits each name and adds the first letters of each part to a string
-full_initials = [name.split()[0][0] + name.split()[1][0] for name in
-                 full_names]
+full_initials = [name.split()[0][0] + name.split()[1][0] for name in full_names]
 print(full_initials)
 
 # one more example, using filtering to select only the names that start with A
