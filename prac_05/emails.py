@@ -25,11 +25,11 @@ def main():
     print("\nThank you.")
 
 
-def extract_name(email):                    # Eg: "maheshram.shunmuganand@my.jcu.edu.au"
+def extract_name(email):  # Eg: "maheshram.shunmuganand@my.jcu.edu.au"
     """Extract name from email address."""
-    no_at_name = email.split('@')[0]        # Eg: ['maheshram.shunmuganand']
-    no_dot_name = no_at_name.split('.')     # Eg: ['maheshram', 'shunmuganand']
-    name = " ".join(no_dot_name).title()    # Eg: "Maheshram Shunmuganand"
+    no_at_name = email.split('@')[0]  # Eg: ['maheshram.shunmuganand']
+    no_dot_name = no_at_name.split('.')  # Eg: ['maheshram', 'shunmuganand']
+    name = " ".join(no_dot_name).title()  # Eg: "Maheshram Shunmuganand"
     return name
 
 
