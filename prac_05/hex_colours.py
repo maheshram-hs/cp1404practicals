@@ -1,5 +1,5 @@
 """
-Description...
+Get colour name from user and print its HEX code.
 
 Hex Colours. Created by Maheshram Shunmuganand, December 2021
 """
