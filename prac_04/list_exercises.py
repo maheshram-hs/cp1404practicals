@@ -8,8 +8,13 @@ List Exercises. Created ny Maheshram Shunmuganand, December 2021
 def main():
     """Basic list operations."""
     numbers = []
-    for i in range(1, 6):
-        number = int(input(f"Number {i}: "))
+    index = 1
+    number = int(input(f"Number {index}: "))
+    while number >= 0:
+        index += 1
+        number = int(input(f"Number {index}: "))
+        if number < 0:
+            break
         numbers.append(number)
 
     # Print output.
