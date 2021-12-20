@@ -39,7 +39,7 @@ def main():
             # between negative MAX_DECREASE and 0
             price_change = random.uniform(-MAX_DECREASE, 0)
 
-        price *= (1 + price_change)
+        price = price + (price * price_change)  # price *= (1 + price_change)
         print(f"On day {counter} price is: ${price:,.2f}", file=out_file)
 
     out_file.close()
