@@ -14,7 +14,7 @@ INITIAL_GOPHERS = 1000
 
 
 def main():
-    """..."""
+    """Simulate gopher population over 10 years."""
     print("Welcome to the Gopher Population Simulator!")
     gophers = INITIAL_GOPHERS
     new_gophers = 0
@@ -36,9 +36,11 @@ def main():
         else:
             bye_gophers = random.uniform(0, G_BYE_25)
 
+        # Calculate born gophers
         gophers = gophers + (gophers * new_gophers)
         gophers_born = gophers * new_gophers
 
+        # Calculate died gophers
         gophers = gophers + (gophers * bye_gophers)
         gophers_died = gophers * bye_gophers
 
