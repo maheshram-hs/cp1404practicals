@@ -14,14 +14,14 @@ def main():
     cost = 16035.40
 
     guitar = Guitar(name, year, cost)
-    other = Guitar("Another Guitar", 2013, 17945.90)
+    print(f"\n{guitar.name:>35}\n")
+    print(f"{guitar.name}     get_age() - Expected {98}.    Got {guitar.get_age()}")
+    print(f"{guitar.name}  is_vintage() - Expected {False}. Got {guitar.is_vintage()}")
 
-    print(f"{guitar.name} get_age() - Expected 95. Got {guitar.get_age()}")
-    print(f"{other.name} get_age() - Expected 5. Got {other.get_age()}")
-    print("")
-
-    print(f"{guitar.name} is_vintage() - Expected True. Got {guitar.is_vintage()}")
-    print(f"{other.name} is_vintage() - Expected False. Got {other.is_vintage()}")
+    guitar_two = Guitar("Martin D-45", 1933, 135000.00)  # Year changed from 2013 to 1933
+    print(f"\n{guitar_two.name:>35}\n")
+    print(f"{guitar_two.name}     get_age() - Expected {89}.   Got {guitar_two.get_age()}")
+    print(f"{guitar_two.name}  is_vintage() - Expected {True}. Got {guitar_two.is_vintage()}")
 
 
 if __name__ == '__main__':
