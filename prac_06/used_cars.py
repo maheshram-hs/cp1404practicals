@@ -6,17 +6,19 @@ from prac_06.car import Car
 
 def main():
     """Demo test code to show how to use car class."""
-    my_car = Car("Car", 180)
-    my_car.drive(30)  # fuel: 150
-
     print("\n* Car *\n")
 
-    print("fuel =", my_car.fuel)
-    print("odo =", my_car.odometer)
-    print(f"\n{my_car}")
+    my_car = Car("Car", 100)
+    my_car.add_fuel(20)
 
-    print("Car {}, {}".format(my_car.fuel, my_car.odometer))
-    print("Car {self.fuel}, {self.odometer}".format(self=my_car))
+    print("fuel =", my_car.fuel)
+    my_car.drive(115)
+    print("odo =", my_car.odometer)
+
+    # print("Car {}, {}".format(my_car.fuel, my_car.odometer))
+    # print("Car {self.fuel}, {self.odometer}".format(self=my_car))
+
+    print(my_car)
 
     print("\n* Limo *\n")
 
