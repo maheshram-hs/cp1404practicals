@@ -1,0 +1,19 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        TextInput:
+            id: user_input
+            text: '34'
+            multiline: False
+        BoxLayout:
+            Button:
+                text: 'Up'
+                # on_press: app.handle_up()
+            Button:
+                text: 'Down'
+                # on_press: app.handle_up()
+    Button:
+        text: 'Convert m to km'
+        # on_press: app.convert()
+    Label:
+        id: user_output
