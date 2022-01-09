@@ -36,7 +36,6 @@ class MilesConvert(App):
         self.root.ids.user_input.text = f"{miles:.0f}"
 
     def update_result(self, miles):
-        print("update")
         self.message = f"{miles * MILES_TO_KM:.3f}"
 
     def convert_to_number(self, text):
