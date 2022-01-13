@@ -1,0 +1,21 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        TextInput:
+            id: user_input
+            text: '34'
+            multiline: False
+            on_text: app.convert(user_input.text)
+        BoxLayout:
+            Button:
+                text: 'Up'
+                on_press: app.handle_ud(1, user_input.text)
+            Button:
+                text: 'Down'
+                on_press: app.handle_ud(-1, user_input.text)
+    Button:
+        text: 'Convert Miles to Km'
+        on_press: app.convert(user_input.text)
+    Label:
+        id: user_output
+        text: app.message
