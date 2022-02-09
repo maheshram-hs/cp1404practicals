@@ -58,7 +58,11 @@ def demo_walk():
         print("(Current working directory is: {})".format(os.getcwd()))
 
         # TODO: add a loop to rename the files
+        for filename in filenames:
+            new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+            print("Renaming {} to {}".format(filename, new_name))
+            os.rename(filename, new_name)
 
 
-main()
-# demo_walk()
+# main()
+demo_walk()
