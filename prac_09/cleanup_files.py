@@ -9,7 +9,7 @@ import string
 
 def main():
     """Demo os module functions."""
-    file_name = "Away In A Manger.txt"
+    # file_name = "Away In A Manger.txt"
     # file_name = "Silent_Night.txt"
     # file_name = "O little town of bethlehem.TXT"
     file_name = "ItIsWell (oh my soul).txt"
@@ -19,17 +19,25 @@ def main():
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
+
     filename = filename.replace(" ", "_").replace(".TXT", ".txt")
+
     new_name = ""
     previous_char = ""
     for i, char in enumerate(filename):
         if char.isupper() and i != 0 and previous_char != "_":
             new_name += "_"
+
         if char.islower() and previous_char in SPECIAL_CHARACTERS:
-            new_name.replace(char, char.upper())
+            new_name += char.upper()
+            previous_char = char
+            continue
 
         new_name += char
         previous_char = char
+
+    new_name = new_name.replace(".Txt", ".txt")
+
     return new_name
 
 
