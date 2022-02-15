@@ -4,22 +4,32 @@ Demos of various os module examples
 """
 import shutil
 import os
+import string
 
 
 def main():
     """Demo os module functions."""
-    print("Starting directory is: {}".format(os.getcwd()))
-
-    # Change to desired directory
-    os.chdir('Lyrics/Christmas')
-
-    # Print a list of all files in current directory
-    print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
+    file_name = "Away In A Manger.txt"
+    # file_name = "Silent_Night.txt"
+    # file_name = "O little town of bethlehem.TXT"
+    file_name = "ItIsWell (oh my soul).txt"
+    print(get_fixed_filename(file_name))
 
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
+    filename = filename.replace(" ", "_").replace(".TXT", ".txt")
+    new_name = ""
+    previous_char = ""
+    for i, char in enumerate(filename):
+        if char.isupper() and i != 0 and previous_char != "_":
+            new_name += "_"
+        if char.islower() and previous_char in SPECIAL_CHARACTERS:
+            new_name.replace(char, char.upper())
+
+        new_name += char
+        previous_char = char
     return new_name
 
 
@@ -40,5 +50,5 @@ def demo_walk():
             # os.rename(old_name, new_name)
 
 
-# main()
-demo_walk()
+main()
+# demo_walk()
