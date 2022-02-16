@@ -2,13 +2,12 @@
 CP1404/CP5632 Practical
 Demos of various os module examples
 """
-import shutil
+
 import os
-import string
 
 
 def main():
-    """Test the get_fixed_filename() function."""
+    """Test the function."""
     # file_name = "Away In A Manger.txt"
     # file_name = "Silent_Night.txt"
     # file_name = "O little town of bethlehem.TXT"
@@ -54,8 +53,8 @@ def os_walk():
         for filename in filenames:
             old_name = os.path.join(directory_name, filename)
             new_name = os.path.join(directory_name, get_fixed_filename(filename))
-            print("Renaming {} to {}".format(old_name, new_name))
-            # os.rename(old_name, new_name)
+            # print("Renaming {} to {}".format(old_name, new_name))
+            os.rename(old_name, new_name)
 
 
 # main()
