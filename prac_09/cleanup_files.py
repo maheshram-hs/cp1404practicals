@@ -8,7 +8,7 @@ import string
 
 
 def main():
-    """Demo os module functions."""
+    """Test the get_fixed_filename() function."""
     # file_name = "Away In A Manger.txt"
     # file_name = "Silent_Night.txt"
     # file_name = "O little town of bethlehem.TXT"
@@ -25,7 +25,7 @@ def get_fixed_filename(filename):
     new_name = ""
     previous_char = ""
     for i, char in enumerate(filename):
-        if char.isupper() and i != 0 and previous_char != "_":
+        if char.isupper() and i != 0 and previous_char not in SPECIAL_CHARACTERS:
             new_name += "_"
 
         if char.islower() and previous_char in SPECIAL_CHARACTERS:
@@ -41,7 +41,7 @@ def get_fixed_filename(filename):
     return new_name
 
 
-def demo_walk():
+def os_walk():
     """Process all subdirectories using os.walk()."""
     os.chdir('Lyrics')
     for directory_name, subdirectories, filenames in os.walk('.'):
@@ -58,5 +58,5 @@ def demo_walk():
             # os.rename(old_name, new_name)
 
 
-main()
-# demo_walk()
+# main()
+os_walk()
