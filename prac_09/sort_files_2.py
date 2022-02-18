@@ -1,7 +1,7 @@
 """
 Program to sort and organise files based on user chosen directories.
 
-Sort Files 1. Created by Maheshram Shunmuganand, February 2022
+Sort Files 2. Created by Maheshram Shunmuganand, February 2022
 """
 
 import os
