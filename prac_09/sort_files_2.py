@@ -28,8 +28,7 @@ def main():
             if extension not in extension_types:
                 extension_types.append(extension)
 
-        # Create directories for each file type.
-
+        # Ask user for directories names.
         for ext_type in extension_types:
             dir_name = input(f"What category would you like to sort {ext_type} files into? ")
             try:
