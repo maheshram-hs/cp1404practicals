@@ -1,5 +1,5 @@
 """
-Program to sort and organise files based on filetype.
+Program to sort and organise files based on user chosen directories.
 
 Sort Files 1. Created by Maheshram Shunmuganand, February 2022
 """
@@ -9,7 +9,7 @@ import shutil
 
 
 def main():
-    """Creat directories for each filetype and sort all files appropriately."""
+    """Creat directories for each filetype and sort all files based on user chosen directories."""
     os.chdir("FilesToSort")
     for directory_name, subdirectories, filenames in os.walk('.'):
 
