@@ -1,5 +1,5 @@
 """
-...
+Program to sort and organise files based on filetype.
 
 Sort Files 1. Created by Maheshram Shunmuganand, February 2022
 """
@@ -9,10 +9,12 @@ import shutil
 
 
 def main():
-    """..."""
+    """Creat directories for each filetype and sort all files appropriately."""
     os.chdir("FilesToSort")
     for directory_name, subdirectories, filenames in os.walk('.'):
 
+        # Make list of all the types of extensions.
+        # Make a dictionary of filename and extension type pair.
         extensions = []
         filename_to_extension = {}
         for filename in filenames:
@@ -20,20 +22,21 @@ def main():
             extensions.append(ext[-1])
             filename_to_extension[filename] = ext[-1]
 
+        # Make a list of all the unique and different types of extensions.
         extension_types = []
         for extension in extensions:
             if extension not in extension_types:
                 extension_types.append(extension)
 
-        print(extension_types)
-        print(filename_to_extension)
-        print(filenames)
-
+        # Create directories for each file type.
         for ext_type in extension_types:
             try:
                 os.mkdir(ext_type)
             except FileExistsError:
                 continue
+        # Move all files to its own appropriate directories.
+        for key, value in filename_to_extension.items():
+            shutil.move(key, f'{value}/')
 
 
 if __name__ == '__main__':
