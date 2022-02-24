@@ -27,7 +27,7 @@ print(full_initials)
 a_names = [name for name in names if name.startswith('A')]
 print(a_names)
 
-# Use a list comprehension to create a list of all of the full_names
+# Use a list comprehension to create a list of all the full_names
 # in lowercase format
 lowercase_full_names = [name.lower() for name in full_names]
 print(lowercase_full_names)
